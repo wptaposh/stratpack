@@ -1,0 +1,235 @@
+/*----------------------------------------*/
+/*  03. Hero Css
+/*----------------------------------------*/
+
+.aslider span {
+	color: $white;
+	margin-bottom: 38px;
+	display: block;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 4px;
+	width: 270px;
+	height: 40px;
+	background: $tobar-bg;
+	line-height: 40px;
+	display: inline-block;
+}
+.aslider--title {
+    font-size: 158px;
+    line-height: 1.12;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $white;
+    font-family: $anton;
+    @media #{$lg} {
+        font-size: 100px;
+    }
+    @media #{$md} {
+        font-size: 48px;
+    }
+    @media #{$sm} {
+        font-size: 48px;
+        
+    }
+    @media #{$xs} {
+        font-size: 36px;
+        br{
+            display: none;
+        }
+    }
+    
+}
+
+
+.aslider--subtitle {
+    font-size: 27px;
+    line-height: 37px;
+    font-weight: 400;
+    color: $white;
+    @media #{$md} {
+        font-size: 20px;
+        br {
+            display: none;
+        }
+    }
+    @media #{$xs} {
+        font-size: 16px;
+        line-height: 30px;
+        br {
+            display: none;
+        }
+    }
+    @media #{$sm} {
+        font-size: 16px;
+        br {
+            display: none;
+        }
+    }
+    
+}
+.single-slider {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-height {
+    position: relative;
+    padding: 200px 0px;
+    @media #{$sm} {
+        padding: 100px 0px;
+    }
+    @media #{$xs} {
+        padding: 100px 0px;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);        
+        top: 0;
+        left: 0;    
+        transform: scale(1);
+        z-index: 1;
+        }  
+}
+.slide-bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	z-index: 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	transform: scale(1);
+    @include transition(8s);
+    
+}
+.swiper-slide-active  .slide-bg{
+	-webkit-transform: scale(1.12);
+	-moz-transform: scale(1.12);
+	transform: scale(1.12);
+}
+
+//slider arrow
+.slider-active .slide-prev, .slider-active .slide-next {
+    position: absolute;
+	font-size: 20px;
+    border: 1px solid $slider-next;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    color: $slider-next;
+    border-radius: 50%;
+	outline: none;
+	cursor: pointer;
+	z-index: 3;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+    left: 40px;
+	margin: 0px;
+    vertical-align: middle;
+    @include transition(.3s);
+    box-shadow: 0px 0px 30px 0px rgba(0, 5, 63, 0.1);
+    &:hover {
+        background: $theme-color;
+        color: $white;
+        border: 1px solid $theme-color;
+    }
+    @media #{$xxl,xl,$lg,$md,$sm} {
+        top: inherit;
+        bottom: 15%;
+        left: 44.5%;
+        transform: none;
+    }
+    @media #{$xl} {
+        left: 44%;
+        top: 90%;
+    }
+    @media #{$lg} {
+        left: 42.5%;
+    }
+    @media #{$md} {
+        left: 40.5%;
+    }
+    @media #{$sm} {
+        left: 37.5%;
+    }
+    @media #{$xs} {
+        display: none;
+    }
+    &:hover {
+        background: $theme-color;
+        color: $white;
+    }
+}
+.slider-active .slide-next {
+	left: auto;
+    right: 40px;
+    @media #{$xxl,xl,$lg,$md,$sm} {
+        top: inherit;
+        bottom: 15%;
+        right: 44.5%;
+    }
+    @media #{$xl} {
+        right: 44%;
+    }
+    @media #{$lg} {
+        right: 42.5%;
+    }
+    @media #{$md} {
+        right: 40.5%;
+    }
+    @media #{$sm} {
+        right: 37.5%;
+    }
+    @media #{$xs} {
+        display: none;
+    }
+}
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+    opacity: 0.7;
+}
+
+
+
+// slider text animation
+
+
+@-webkit-keyframes sliderTextAnimation {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 100%;
+    }
+  }
+
+
+  @keyframes sliderTextAnimation {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 100%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
